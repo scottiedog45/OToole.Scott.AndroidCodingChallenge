@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RootCellLayout">
+
+    <com.google.android.material.card.MaterialCardView style="@style/BookCardView">
+
+        <LinearLayout style="@style/CardviewContentWrapper">
+
+            <ImageView
+                android:id="@+id/image_view_for_book_cell"
+                style="@style/BookImageView" />
+
+            <LinearLayout style="@style/DescriptionWrapper">
+
+                <TextView
+                    android:id="@+id/textview_for_book_cell_title"
+                    style="@style/BookTitle" />
+
+                <TextView
+                    android:id="@+id/text_view_for_book_cell_author"
+                    style="@style/BookAuthor" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

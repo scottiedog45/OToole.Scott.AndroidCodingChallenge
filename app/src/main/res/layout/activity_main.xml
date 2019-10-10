@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootActivityLayout"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/book_list_searchview"
+        style="@style/BookSearchView" />
+
+    <TextView
+        android:id="@+id/item_count"
+        style="@style/ItemsTotal"
+        android:layout_below="@id/book_list_searchview" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/book_list_recycle_view"
+        style="@style/BookListRecyclerView"
+        android:layout_below="@id/item_count" />
+
+</RelativeLayout>

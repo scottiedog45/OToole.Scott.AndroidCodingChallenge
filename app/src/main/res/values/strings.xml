@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+    <string name="total">Total items : %1$s</string>
+    <string name="content_description">item image</string>
+</resources>

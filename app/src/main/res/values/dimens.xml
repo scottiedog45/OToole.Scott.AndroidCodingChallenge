@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bookCardElevation">6dp</dimen>
+    <dimen name="bookCardCornerRadius">4dp</dimen>
+    <dimen name="cardviewContentPadding">5dp</dimen>
+    <dimen name="bookImageWidth">100dp</dimen>
+    <dimen name="bookImageHeight">200dp</dimen>
+    <dimen name="descriptionWrapperPaddingStart">10dp</dimen>
+    <dimen name="bookTitleTextSize">16sp</dimen>
+    <dimen name="rootCellLayoutPaddingStartAndEnd">12dp</dimen>
+    <dimen name="searchViewHeight">70dp</dimen>
+</resources>
