@@ -1,7 +1,5 @@
 package otoole.scott.androidtest
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class BookListAdapter(val books : List<BookModel>? = null) : RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
+class BookListAdapter(books : List<BookModel>? = null) : RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
 
     private var receivedBooks = books
 
@@ -20,20 +18,20 @@ class BookListAdapter(val books : List<BookModel>? = null) : RecyclerView.Adapte
     }
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val title = itemView.findViewById<TextView>(R.id.textview_for_book_cell_title)
+        val title = itemView.findViewById<TextView>(R.id.text_view_for_book_cell_title)
         val author = itemView.findViewById<TextView>(R.id.text_view_for_book_cell_author)
         val image = itemView.findViewById<ImageView>(R.id.image_view_for_book_cell)
     }
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.book_cell, parent, false)
         return ViewHolder(v)
     }
 
     override fun getItemCount() : Int = receivedBooks?.size ?: 0
 
-    override fun onBindViewHolder(holder: BookListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val book = receivedBooks?.get(position)
 
