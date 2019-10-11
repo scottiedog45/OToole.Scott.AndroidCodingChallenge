@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var bookAdapter : BookListAdapter
 
+    lateinit var repo : NetworkService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         //////////////////////////////
 
         val recyclerView = findViewById<RecyclerView>(R.id.book_list_recycle_view)
+
+        repo = NetworkService.getInstance()
 
         bookAdapter = BookListAdapter()
 
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         ///////////////////////////////
 
         vm = ViewModelProviders
-                .of(this, MainActivityViewModel.FACTORY(NetworkService()))
+                .of(this, MainActivityViewModel.FACTORY(repo))
                 .get(MainActivityViewModel::class.java)
 
         vm.bookList.observe(this, Observer {

@@ -23,7 +23,6 @@ class BookListAdapter(books : List<BookModel>? = null) : RecyclerView.Adapter<Bo
         val image = itemView.findViewById<ImageView>(R.id.image_view_for_book_cell)
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.book_cell, parent, false)
         return ViewHolder(v)
